@@ -1,0 +1,42 @@
+.upperrequestcard{
+	border-bottom: solid 1px #fff;
+}
+.name-bg-sendinfo{
+	background: #fff;
+	width: 65px;
+	height: 65px;
+/*	padding:0.5rem;*/
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+/*	margin-top:30px;*/
+}
+.title{
+	color: #7F90A8;
+}
+.warningbtn{
+	border: none;
+	outline: none;
+	background:rgba(241, 180, 76, 1);
+	color:#fff;
+	border-radius: 10px;
+	padding:5px;
+}
+.criticalbtn{
+	border: none;
+	outline: none;
+	background:rgba(244, 106, 106, 1);
+	color:#fff;
+	border-radius: 10px;
+	padding:5px;
+}
+.sendinfobtn{
+  background:#242424;
+  padding: 6px 10px;
+  border:none;
+  border-radius:4px;
+  color:#fff;
+  font-size:14px;
+  text-align: center;
+}

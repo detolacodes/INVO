@@ -1,0 +1,47 @@
+.intro1{
+/*	color: green;*/
+ font-weight: bold;
+ color:#7F90A8;
+}
+.intro2{
+/*	color: green;*/
+/* font-weight: 700;*/
+ color:#fff;
+}
+input{
+	background:#fff;
+	border: none;
+	outline: none;
+	padding: 7px 0;
+}
+.input1, .input2{
+	width:570px;
+}
+select{
+	border: none;
+	outline: none;
+}
+.bal{
+    color:#44DA79;
+}
+.input3{
+	width:300px;
+}
+.group-1{
+	display: flex;
+	justify-content: space-aroun;
+	align-items:flex-start;
+	width:100%;
+}
+.gameposter{
+/*	margin-top:75px;*/
+}
+.fb{
+	font-weight: bold;
+}
+.bg-cont{
+	background-color: #535c68;
+}
+.bg-wrap{
+	background-color: #34fa57;
+}

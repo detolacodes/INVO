@@ -1,0 +1,53 @@
+.compbtn{
+	background: rgba(83, 92, 104, 1);
+	padding:5px 10px;
+	border: none;
+	outline: none;
+	color:#fff;
+	margin:0 10%;
+}
+.PSSactive{
+	color:red;
+}
+.mlx{
+	margin-left:0.26rem;
+}
+.labelcircle{
+	width:18px;
+	height:18px;
+	border-radius:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.PSSsidebar{
+	height:800px!important;
+}
+.pSS{
+	height:90vh;
+}
+.pSS2{
+	height:72vh;
+}
+.bg-support{
+	background:rgba(80, 165, 241, 1) ;
+}
+.pssIconcarrier{
+	background: rgba(83, 92, 104, 1);
+	padding:5px 15px;
+	margin:0 0.8%;
+	color:#fff;
+}
+.input{
+/*	display: inline-table;*/
+	padding:20px;
+}
+.labelbtn{
+/*	background:#242424;*/
+  padding: 3px 7px;
+  border:none;
+  border-radius:4px;
+  color:#fff;
+  font-size:10px;
+/*  text-align: center;*/
+}

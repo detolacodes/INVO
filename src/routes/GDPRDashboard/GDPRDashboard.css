@@ -1,0 +1,14 @@
+.bg-nums{
+	background:#fff;
+	width:20px;
+	height: 20px;
+	border-radius: 100%;
+	padding:15px;
+	margin:0 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.numbg > div:nth-child(3){
+	background: rgba(85, 110, 230, 1);
+}

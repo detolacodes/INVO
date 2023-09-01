@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jqCandlestick examples</title>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jqcandlestick.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/jqcandlestick.css" />
+    
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+      }
+      
+      .jqcandlestick-container {
+        width: 640px;
+        height: 480px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/chart-graph/Clean-Minimal-jQuery-Chart-Plugin-jqCandlestick.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<h1 style="margin-top:150px;">jqCandlestick Examples</h1>
+    <script type="text/javascript">
+      // Generate data
+      
+      var data = [];
+      
+      var time = new Date('Dec 1, 2013 12:00').valueOf();
+      
+      var h = Math.floor(Math.random() * 100);
+      var l = h - Math.floor(Math.random() * 20);
+      var o = h - Math.floor(Math.random() * (h - l));
+      var c = h - Math.floor(Math.random() * (h - l));
+
+      var v = Math.floor(Math.random() * 1000);
+      
+      for (var i = 0; i < 30; i++) {
+        data.push([time, o, h, l, c, v]);
+        h += Math.floor(Math.random() * 10 - 5);
+        l = h - Math.floor(Math.random() * 20);
+        o = h - Math.floor(Math.random() * (h - l));
+        c = h - Math.floor(Math.random() * (h - l));
+        v += Math.floor(Math.random() * 100 - 50);
+        time += 30 * 60000; // Add 30 minutes
+      }
+    </script>
+    
+    <h2>Points</h2>
+    
+    <div id="example-1"></div>
+    
+    <script type="text/javascript">
+      $(function() {
+        $('#example-1').jqCandlestick({
+          data: data,
+          theme: 'light',
+          series: [{
+          }],
+        });
+      });
+    </script>
+    
+    <h2>Line</h2>
+    
+    <div id="example-2"></div>
+    
+    <script type="text/javascript">
+      $(function() {
+        $('#example-2').jqCandlestick({
+          data: data,
+          theme: 'light',
+          series: [{
+            type: 'line',
+          }],
+        });
+      });
+    </script>
+    
+    <h2>Columns</h2>
+    
+    <div id="example-3"></div>
+    
+    <script type="text/javascript">
+      $(function() {
+        $('#example-3').jqCandlestick({
+          data: data,
+          theme: 'light',
+          series: [{
+            type: 'column',
+          }],
+        });
+      });
+    </script>
+    
+    <h2>Lines and points</h2>
+    
+    <div id="example-4"></div>
+    
+    <script type="text/javascript">
+      $(function() {
+        $('#example-4').jqCandlestick({
+          data: data,
+          theme: 'light',
+          series: [{
+            type: 'line',
+          }, {
+            type: 'point',
+          }],
+        });
+      });
+    </script>
+    
+    <h2>Colors</h2>
+    
+    <div id="example-5"></div>
+    
+    <script type="text/javascript">
+      $(function() {
+        $('#example-5').jqCandlestick({
+          data: data,
+          theme: 'light',
+          series: [{
+            type: 'line',
+            color: '#C00',
+            strokeWidth: 3,
+          }, {
+            type: 'point',
+            color: '#FFF',
+            stroke: '#C00',
+            radius: 5,
+            strokeWidth: 3,
+          }],
+        });
+      });
+    </script>
+
+    <h2>Candlestick</h2>
+
+    <div id="example-6"></div>
+    
+    <script type="text/javascript">
+      $(function() {
+        $('#example-6').jqCandlestick({
+          data: data,
+          theme: 'light',
+          series: [{
+            type: 'candlestick',
+            color: '#00C',
+          }],
+        });
+      });
+    </script>
+
+    <h2>Multiple y-axes</h2>
+
+    <div id="example-7"></div>
+    
+    <script type="text/javascript">
+      $(function() {
+        $('#example-7').jqCandlestick({
+          data: data,
+          theme: 'light',
+          yAxis: [{
+            height: 7, // 7 / (7 + 3)
+          }, {
+            height: 3, // 3 / (7 + 3)
+          }],
+          series: [{
+            type: 'candlestick',
+            color: '#00C',
+          }, {
+            type: 'column',
+            name: 'VOLUME',
+            yAxis: 1,
+            color: '#0C0',
+          }],
+        });
+      });
+    </script>
+
+    <h2>Candlestick colors</h2>
+
+    <div id="example-8"></div>
+    
+    <script type="text/javascript">
+      $(function() {
+        $('#example-8').jqCandlestick({
+          data: data,
+          theme: 'light',
+          yAxis: [{
+            height: 7, // 7 / (7 + 3)
+          }, {
+            height: 3, // 3 / (7 + 3)
+          }],
+          series: [{
+            type: 'candlestick',
+            upStroke: '#0C0',
+            downStroke: '#C00',
+            downColor: 'rgba(255, 0, 0, 0.4)',
+          }, {
+            type: 'column',
+            name: 'VOLUME',
+            yAxis: 1,
+            stroke: '#00C',
+            color: 'rgba(0, 0, 255, 0.5)',
+          }],
+        });
+      });
+    </script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>
